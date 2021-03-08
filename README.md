@@ -1,16 +1,6 @@
-# flutter_student
+# bmi_computer
 
-A new Flutter application.
+將BMI網頁，改用flutter開發方式成app.
 
-## Getting Started
+- [轉換的網頁](http://depart.femh.org.tw/dietary/3opd/bmi.htm)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
