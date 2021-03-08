@@ -68,8 +68,7 @@ class _BMIState extends State<BMIPage> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 20),
-            width: 250,
+            margin: EdgeInsets.fromLTRB(50, 30, 50, 0),
             child: TextField(
               decoration: InputDecoration(labelText: '請輸入身高'),
               controller: _peopleController,
