@@ -25,7 +25,7 @@ class _BMIState extends State<BMIPage> {
   final _kgController = TextEditingController();
 
   /// 公斤輸入焦點
-  final _kgFocus = FocusNode();
+  final FocusNode _kgFocus = FocusNode();
 
   /// 身高輸入控制器
   final _peopleController = TextEditingController();
@@ -43,18 +43,18 @@ class _BMIState extends State<BMIPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('BMI計算機')),
+      appBar: AppBar(title: const Text('BMI計算機')),
       body: Center(
         child: Column(children: [
           Container(
-              margin: EdgeInsets.only(top: 20),
+              margin: const EdgeInsets.only(top: 20),
               child: Image.asset('images/bmi_form.png')),
           Container(
-            margin: EdgeInsets.fromLTRB(50, 30, 50, 0),
+            margin: const EdgeInsets.fromLTRB(50, 30, 50, 0),
             child: TextField(
               controller: _kgController,
               focusNode: _kgFocus,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: '請輸入公斤',
               ),
               keyboardType: TextInputType.number,
@@ -68,9 +68,9 @@ class _BMIState extends State<BMIPage> {
             ),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(50, 30, 50, 0),
+            margin: const EdgeInsets.fromLTRB(50, 30, 50, 0),
             child: TextField(
-              decoration: InputDecoration(labelText: '請輸入身高'),
+              decoration: const InputDecoration(labelText: '請輸入身高'),
               controller: _peopleController,
               focusNode: _peopleFocus,
               onSubmitted: (value) => Focus.of(context).dispose(),
@@ -82,16 +82,16 @@ class _BMIState extends State<BMIPage> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 30),
+            margin: const EdgeInsets.only(top: 30),
             width: 200,
             child: ElevatedButton(
-                child: Text('計算'),
+                child: const Text('計算'),
                 onPressed: () {
                   _getBMI();
                 }),
           ),
           Container(
-            margin: EdgeInsets.only(top: 20),
+            margin: const EdgeInsets.only(top: 20),
             width: 250,
             child: Text('BMI結果 = $sum'),
           )
@@ -114,8 +114,8 @@ class _BMIState extends State<BMIPage> {
     } on Exception {
       cm = 0;
     }
-    double m = cm / 100;
-    var bmi = kg / (m * m);
+    final m = cm / 100;
+    final bmi = kg / (m * m);
     print('SSs  = ${_kgController.text}');
     if (_kgController.text.isEmpty || _peopleController.text.isEmpty) {
       sum = '';
