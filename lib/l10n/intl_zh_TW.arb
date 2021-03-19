@@ -1,0 +1,32 @@
+{
+    "bmiComputer": "BMI計算機",
+    "@bmiComputer": {
+        "description": "BMI計算機",
+        "type": "text",
+        "placeholders": {}
+    },
+    "pleaseEnterKilograms": "請輸入公斤",
+    "@pleaseEnterKilograms": {
+        "description": "BMI計算機/請輸入公斤",
+        "type": "text",
+        "placeholders": {}
+    },
+    "pleaseEnterHeight": "請輸入身高",
+    "@pleaseEnterHeight": {
+        "description": "BMI計算機/請輸入身高",
+        "type": "text",
+        "placeholders": {}
+    },
+    "count": "計算",
+    "@count": {
+        "description": "BMI計算機/計算",
+        "type": "text",
+        "placeholders": {}
+    },
+    "bmiResults": "BMI結果",
+    "@bmiResults": {
+        "description": "BMI計算機/BMI結果",
+        "type": "text",
+        "placeholders": {}
+    }
+}

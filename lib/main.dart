@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_student/generated/l10n.dart';
 
 void main() {
-  runApp(FirstAPP());
+  runApp(BMI());
 }
 
-class FirstAPP extends StatelessWidget {
+class BMI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        localizationsDelegates: const [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          BMIApp.delegate
+        ],
+        supportedLocales: BMIApp.delegate.supportedLocales,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch: Colors.orange),
         home: BMIPage());
@@ -43,7 +51,7 @@ class _BMIState extends State<BMIPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('BMI計算機')),
+      appBar: AppBar(title: Text(BMIApp.of(context).bmiComputer)),
       body: Center(
         child: Column(children: [
           Container(
@@ -54,8 +62,8 @@ class _BMIState extends State<BMIPage> {
             child: TextField(
               controller: _kgController,
               focusNode: _kgFocus,
-              decoration: const InputDecoration(
-                hintText: '請輸入公斤',
+              decoration: InputDecoration(
+                hintText: BMIApp.of(context).pleaseEnterKilograms,
               ),
               keyboardType: TextInputType.number,
               inputFormatters: [
@@ -70,7 +78,8 @@ class _BMIState extends State<BMIPage> {
           Container(
             margin: const EdgeInsets.fromLTRB(50, 30, 50, 0),
             child: TextField(
-              decoration: const InputDecoration(labelText: '請輸入身高'),
+              decoration: InputDecoration(
+                  labelText: BMIApp.of(context).pleaseEnterHeight),
               controller: _peopleController,
               focusNode: _peopleFocus,
               onSubmitted: (value) => Focus.of(context).dispose(),
@@ -85,7 +94,7 @@ class _BMIState extends State<BMIPage> {
             margin: const EdgeInsets.only(top: 30),
             width: 200,
             child: ElevatedButton(
-                child: const Text('計算'),
+                child: Text(BMIApp.of(context).count),
                 onPressed: () {
                   _getBMI();
                 }),
@@ -93,7 +102,7 @@ class _BMIState extends State<BMIPage> {
           Container(
             margin: const EdgeInsets.only(top: 20),
             width: 250,
-            child: Text('BMI結果 = $sum'),
+            child: Text('${BMIApp.of(context).bmiResults} = $sum'),
           )
         ]),
       ),
@@ -116,7 +125,6 @@ class _BMIState extends State<BMIPage> {
     }
     final m = cm / 100;
     final bmi = kg / (m * m);
-    print('SSs  = ${_kgController.text}');
     if (_kgController.text.isEmpty || _peopleController.text.isEmpty) {
       sum = '';
     } else {
