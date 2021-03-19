@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_student/generated/l10n.dart';
 
+import 'colors.dart';
+
 void main() {
   runApp(BMI());
 }
@@ -18,7 +20,7 @@ class BMI extends StatelessWidget {
         ],
         supportedLocales: BMIApp.delegate.supportedLocales,
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(primarySwatch: Colors.orange),
+        theme: ThemeData(primaryColor: mainColor),
         home: BMIPage());
   }
 }
@@ -95,6 +97,9 @@ class _BMIState extends State<BMIPage> {
             width: 200,
             child: ElevatedButton(
                 child: Text(BMIApp.of(context).count),
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                        (states) => buttonColor)),
                 onPressed: () {
                   _getBMI();
                 }),

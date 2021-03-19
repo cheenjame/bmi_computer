@@ -7,7 +7,7 @@
     },
     "pleaseEnterKilograms": "Please enter kilograms",
     "@pleaseEnterKilograms": {
-        "description": "BMI計算機/請輸入公斤",
+        "description": "BMI計算機/請輸入體重",
         "type": "text",
         "placeholders": {}
     },
