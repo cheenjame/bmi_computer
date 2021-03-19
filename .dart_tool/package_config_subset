@@ -74,10 +74,6 @@ vector_math
 2.12
 file:///Users/zhanyiqian/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.0/
 file:///Users/zhanyiqian/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.0/lib/
-flutter_student
-2.12
-file:///Users/zhanyiqian/Desktop/bmi_computer/
-file:///Users/zhanyiqian/Desktop/bmi_computer/lib/
 sky_engine
 2.12
 file:///Users/zhanyiqian/Desktop/flutter/bin/cache/pkg/sky_engine/
@@ -90,4 +86,8 @@ flutter_test
 2.12
 file:///Users/zhanyiqian/Desktop/flutter/packages/flutter_test/
 file:///Users/zhanyiqian/Desktop/flutter/packages/flutter_test/lib/
+flutter_student
+2.12
+file:///Users/zhanyiqian/Desktop/student/bmi_computer/
+file:///Users/zhanyiqian/Desktop/student/bmi_computer/lib/
 2
