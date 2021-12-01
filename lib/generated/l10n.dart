@@ -99,6 +99,16 @@ class BMIApp {
       args: [],
     );
   }
+
+  /// `體重正常範圍為`
+  String get normalRange {
+    return Intl.message(
+      '體重正常範圍為',
+      name: 'normalRange',
+      desc: 'BMI計算機/體重正常範圍為',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<BMIApp> {

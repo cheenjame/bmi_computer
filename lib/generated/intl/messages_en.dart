@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "bmiComputer": MessageLookupByLibrary.simpleMessage("BMI Computer"),
         "bmiResults": MessageLookupByLibrary.simpleMessage("BMI Results"),
         "count": MessageLookupByLibrary.simpleMessage("Count"),
+        "normalRange": MessageLookupByLibrary.simpleMessage(
+            "The normal range of weight is"),
         "pleaseEnterHeight":
             MessageLookupByLibrary.simpleMessage("Please enter height"),
         "pleaseEnterKilograms":

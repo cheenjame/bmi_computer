@@ -28,5 +28,12 @@
         "description": "BMI計算機/BMI結果",
         "type": "text",
         "placeholders": {}
+    },
+    "normalRange": "體重正常範圍為",
+    "@normalRange": {
+        "description": "BMI計算機/體重正常範圍為",
+        "type": "text",
+        "placeholders": {}
     }
+
 }

@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "bmiComputer": MessageLookupByLibrary.simpleMessage("BMI計算機"),
         "bmiResults": MessageLookupByLibrary.simpleMessage("BMI結果"),
         "count": MessageLookupByLibrary.simpleMessage("計算"),
+        "normalRange": MessageLookupByLibrary.simpleMessage("體重正常範圍為"),
         "pleaseEnterHeight": MessageLookupByLibrary.simpleMessage("請輸入身高"),
         "pleaseEnterKilograms": MessageLookupByLibrary.simpleMessage("請輸入公斤")
       };
