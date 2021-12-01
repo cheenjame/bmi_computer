@@ -1,6 +1,6 @@
 # bmi_computer
 
-**將BMI網頁，改用flutter開發方式成app. **
+**將BMI網頁，改用flutter開發方式成app.**
 
 頁面展示
 
