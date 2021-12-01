@@ -53,6 +53,7 @@ class _BMIState extends State<BMIPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset:false ,
       appBar: AppBar(title: Text(BMIApp.of(context).bmiComputer)),
       body: Center(
         child: Column(children: [
@@ -72,9 +73,8 @@ class _BMIState extends State<BMIPage> {
                 FilteringTextInputFormatter.digitsOnly,
                 LengthLimitingTextInputFormatter(3)
               ],
-              onSubmitted: (value) {
-                FocusScope.of(context).requestFocus(_peopleFocus);
-              },
+              onSubmitted: (value) =>
+                  FocusScope.of(context).requestFocus(_peopleFocus),
             ),
           ),
           Container(
